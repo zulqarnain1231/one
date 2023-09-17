@@ -3,10 +3,9 @@
 @tailwind utilities;
 
 .slick-track {
-  display: flex !important;
-}
-
-.slick-track .slick-slide {
+  display: flex;
   height: 100% !important;
-  background: red !important;
+}
+.slick-slide {
+  height: 100% !important;
 }

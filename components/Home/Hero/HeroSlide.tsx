@@ -7,7 +7,7 @@ interface Props {
 const HeroSlide: React.FC<Props> = ({ title, detail, background }: Props) => {
   return (
     <div
-      className={`lg:px-10 px-4 w-full sm:h-[calc(100vh-100px)] h-[600px] flex lg:flex-row flex-col items-center lg:justify-between justify-start  ${background} bg-cover bg-no-repeat bg-center`}
+      className={`lg:px-10 px-4 w-full h-[calc(100vh-100px)] flex lg:flex-row flex-col items-center lg:justify-between justify-start  ${background} bg-cover bg-no-repeat bg-center`}
     >
       <h1 className="text-white-main sm:text-6xl text-4xl lg:text-right text-center font-medium lg:w-[40%] w-full mt-20 lg:mt-0">
         {title}

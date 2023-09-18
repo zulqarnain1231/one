@@ -5,6 +5,7 @@ import Hero from "@/components/Home/Hero/Hero";
 import Consultation from "@/components/Home/Consultation/Consultation";
 import Services from "@/components/Home/Services/Services";
 import Gallery from "@/components/Home/Gallery/Gallery";
+import Partners from "@/components/Home/Partners";
 
 const noto = Noto_Sans_KR({
   subsets: ["latin"],
@@ -19,6 +20,7 @@ export default function Home() {
       <Consultation />
       <Services />
       <Gallery />
+      <Partners />
     </main>
   );
 }

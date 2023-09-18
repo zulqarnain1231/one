@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Noto_Sans_KR } from "next/font/google";
 import Navbar from "@/components/Shared/Navigation/Navbar";
 import Hero from "@/components/Home/Hero/Hero";
+import Consultation from "@/components/Home/Consultation/Consultation";
 
 const noto = Noto_Sans_KR({
   subsets: ["latin"],
@@ -13,6 +14,7 @@ export default function Home() {
     <main className={`w-full h-full ${noto.className}`}>
       <Navbar />
       <Hero />
+      <Consultation />
     </main>
   );
 }

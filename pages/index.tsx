@@ -3,6 +3,7 @@ import { Noto_Sans_KR } from "next/font/google";
 import Navbar from "@/components/Shared/Navigation/Navbar";
 import Hero from "@/components/Home/Hero/Hero";
 import Consultation from "@/components/Home/Consultation/Consultation";
+import Services from "@/components/Home/Services/Services";
 
 const noto = Noto_Sans_KR({
   subsets: ["latin"],
@@ -15,6 +16,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Consultation />
+      <Services />
     </main>
   );
 }

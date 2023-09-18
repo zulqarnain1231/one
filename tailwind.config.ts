@@ -16,7 +16,7 @@ const config: Config = {
         black: {
           main: "#000000",
           off: "#333",
-          faded: "#999",
+          faded: "#999999",
         },
         white: {
           main: "#ffffff",

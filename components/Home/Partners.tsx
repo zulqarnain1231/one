@@ -21,7 +21,7 @@ const Partners = () => {
     "/Assets/Partners/15.png",
   ];
   return (
-    <ComponentWrapper id="partners" style="bg-white-off lg:py-16 py-10">
+    <ComponentWrapper id="partners" style="bg-white-off lg:py-28 py-10">
       <div className="w-full grid lg:grid-cols-5 grid-cols-2 sm:grid-cols-3">
         {partners.map((item: string, index: number) => (
           <NextImage

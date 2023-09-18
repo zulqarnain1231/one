@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ComponentWrapper from "../Wrappers/ComponentWrapper";
 import Link from "next/link";
 import Image from "next/image";
@@ -9,36 +9,65 @@ import { RiMenu3Fill } from "react-icons/ri";
 import Drawer from "react-modern-drawer";
 import "react-modern-drawer/dist/index.css";
 import { ImCross } from "react-icons/im";
+import { Link as Scrolling } from "react-scroll";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [Show, setShow] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const controlNavbar = () => {
+    if (typeof window !== "undefined") {
+      if (window.scrollY < lastScrollY) {
+        setShow(false);
+      } else {
+        setShow(true);
+      }
+      setLastScrollY(window.scrollY);
+    }
+  };
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", controlNavbar);
+      return () => {
+        window.removeEventListener("scroll", controlNavbar);
+      };
+    }
+  });
   const toggleDrawer = () => {
     setIsOpen((prevvalue) => !prevvalue);
   };
+
   const menu = [
     {
       name: "회사소개",
-      route: "#",
+      route: "news",
     },
     {
       name: "제품서비스",
-      route: "#",
+      route: "service",
     },
     {
       name: "갤러리",
-      route: "#",
+      route: "gallery",
     },
     {
       name: "스킨디자인",
-      route: "#",
+      route: "",
     },
     {
       name: "디자인요소",
-      route: "#",
+      route: "",
     },
   ];
+
   return (
     <>
-      <ComponentWrapper id="navbar" style="h-[100px] w-full bg-white-main">
+      <ComponentWrapper
+        id="navbar"
+        style={`h-[100px] w-full bg-white-main z-20 sticky top-0 ${
+          Show && "md:-top-[100px]"
+        } transition-all duration-1000`}
+      >
         <nav className="w-full h-full flex items-center justify-between">
           <Link href={"/"} className={`relative w-[200px] h-[44px]`}>
             <Image
@@ -54,12 +83,18 @@ const Navbar = () => {
                 key={index}
                 className="flex items-center justify-center gap-4"
               >
-                <Link
-                  href={item.route}
-                  className="text-lg text-black-off font-medium hover:scale-105 hover:text-brand-main hover:duration-300"
+                <Scrolling
+                  key={index}
+                  activeClass="active"
+                  to={item.route}
+                  spy={true}
+                  smooth={true}
+                  hashSpy={true}
+                  duration={1000}
+                  className="text-lg text-black-off font-medium hover:scale-105 hover:text-brand-main hover:duration-300 cursor-pointer"
                 >
                   {item.name}
-                </Link>
+                </Scrolling>
                 {index < menu.length - 1 && (
                   <BsDot className="text-[20px] text-black-off" />
                 )}
@@ -105,13 +140,19 @@ const Navbar = () => {
               key={index}
               className="w-full flex items-center justify-start p-4 border-b-[2px] "
             >
-              <Link
-                href={item.route}
+              <Scrolling
+                key={index}
+                activeClass="active"
+                to={item.route}
+                spy={true}
+                smooth={true}
+                hashSpy={true}
+                duration={1000}
                 onClick={toggleDrawer}
                 className="text-lg text-black-off font-medium hover:scale-105 hover:text-brand-main hover:duration-300"
               >
                 {item.name}
-              </Link>
+              </Scrolling>
             </div>
           ))}
           <div className="w-full flex items-center justify-start p-4 border-b-[2px] ">

@@ -11,7 +11,7 @@ const NextArrow = (props: any) => {
   const { className, style, onClick } = props;
   return (
     <button
-      className={`text-white-main flex items-center justify-center absolute md:bottom-[20%] bottom-[10%] z-10 md:right-[10%] right-[5%]`}
+      className={`text-white-main flex items-center justify-center absolute lg:bottom-[27%]  bottom-[10%] z-10 md:right-[10%] lg:right-[5%] right-[5%]`}
       onClick={onClick}
     >
       <FaLongArrowAltRight className="text-[30px] text-white-main" />
@@ -23,7 +23,7 @@ const PrevArrow = (props: any) => {
   const { className, style, onClick } = props;
   return (
     <button
-      className={`text-white-main flex items-center justify-center absolute md:bottom-[20%] bottom-[10%] z-10 md:right-[15%] right-[15%]`}
+      className={`text-white-main flex items-center justify-center absolute lg:bottom-[27%]  bottom-[10%] z-10 md:right-[15%] lg:right-[10%] right-[15%]`}
       onClick={onClick}
     >
       <FaLongArrowAltLeft className="text-[30px] text-white-main" />

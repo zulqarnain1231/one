@@ -19,6 +19,9 @@ const HeroSlide: React.FC<Props> = ({ title, detail, background }: Props) => {
         <p className="text-white-off text-base text-center font-medium">
           {detail}
         </p>
+        <div className="w-full flex items-center justify-center">
+          <p className="text-center text-white-off text-bae">더 보기</p>
+        </div>
       </div>
     </div>
   );

@@ -37,23 +37,23 @@ const Consultation = () => {
           </div>
         </div>
         <Services />
-      </div>
-      <div className="flex flex-col items-center justify-start gap-3 absolute right-5 top-[20%]">
-        <NextImage
-          imageSrc="/Assets/Consultation/Play.png"
-          containerStyle="h-[50px] w-[50px]"
-          imageStyle="object-contain"
-        />
-        <NextImage
-          imageSrc="/Assets/Consultation/Messege.png"
-          containerStyle="h-[50px] w-[50px]"
-          imageStyle="object-contain"
-        />
-        <NextImage
-          imageSrc="/Assets/Consultation/Modoo.png"
-          containerStyle="h-[50px] w-[50px]"
-          imageStyle="object-contain"
-        />
+        <div className="w-full lg:w-auto flex lg:flex-col items-center lg:justify-start justify-center gap-3 lg:absolute lg:right-5 lg:top-[20%]">
+          <NextImage
+            imageSrc="/Assets/Consultation/Play.png"
+            containerStyle="h-[50px] w-[50px] cursor-pointer"
+            imageStyle="object-contain"
+          />
+          <NextImage
+            imageSrc="/Assets/Consultation/Messege.png"
+            containerStyle="h-[50px] w-[50px] cursor-pointer"
+            imageStyle="object-contain"
+          />
+          <NextImage
+            imageSrc="/Assets/Consultation/Modoo.png"
+            containerStyle="h-[50px] w-[50px] cursor-pointer"
+            imageStyle="object-contain"
+          />
+        </div>
       </div>
     </ComponentWrapper>
   );

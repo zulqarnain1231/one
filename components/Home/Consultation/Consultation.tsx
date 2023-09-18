@@ -1,6 +1,8 @@
 import React from "react";
 import ComponentWrapper from "@/components/Shared/Wrappers/ComponentWrapper";
-import { HiOutlineMail } from "react-icons/hi";
+import NextImage from "@/components/Shared/Image/NextImage";
+import ConsultationHistory from "./ConsultationHistory";
+import AppointmentForm from "./AppointmentForm";
 
 const Consultation = () => {
   return (
@@ -10,20 +12,28 @@ const Consultation = () => {
   "
     >
       <div className="w-full h-full flex flex-col items-center justify-start gap-10 ">
-        <div className="w-full grid grid-cols-[1fr,1.5fr] gap-8">
-          <form className="w-full flex flex-col items-start justify-start gap-4 bg-brand-main rounded-[10px] px-4 py-10 -mt-20">
-            <div className="w-full flex items-center justify-start gap-3">
-              <HiOutlineMail className="text-white-main text-[28px]" />
-              <p className="text-white-main text-2xl font-medium">
-                알뜰서비스 상담신청
-              </p>
+        <div className="w-full grid lg:grid-cols-[1fr,2fr] gap-6">
+          <AppointmentForm />
+          {/* right side */}
+          <div className="w-full grid lg:grid-cols-[.5fr,2fr] md:grid-cols-[1fr,2fr] gap-3">
+            <div className="h-full flex flex-col items-center justify-start gap-4">
+              <NextImage
+                imageSrc="/Assets/Consultation/Pencil.png"
+                imageStyle="object-fill"
+                containerStyle="h-[96px] w-[96px]"
+              />
+              <div className="flex flex-col items-center justify-start gap-1">
+                <p className="text-[28px] leading-9 text-black-off font-medium">
+                  실시간
+                </p>
+                <p className="text-[28px] leading-9 text-brand-main font-medium">
+                  상담현황
+                </p>
+              </div>
             </div>
-            <input
-              type="text"
-              placeholder="이름"
-              className="w-full h-[50px] text-white-main text-base font-medium placeholder:text-white-main placeholder:font-medium  bg-white-main/30 p-4 rounded-[4px] focus:outline-none"
-            />
-          </form>
+            {/* table here */}
+            <ConsultationHistory />
+          </div>
         </div>
       </div>
     </ComponentWrapper>

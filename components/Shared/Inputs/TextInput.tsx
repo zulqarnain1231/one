@@ -4,7 +4,7 @@ interface Props {
   type?: string;
   name: string;
   state: any;
-  setState: () => void;
+  setState: (e: React.ChangeEvent<HTMLInputElement>) => void;
   placeHolder: string;
 }
 

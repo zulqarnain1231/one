@@ -7,6 +7,7 @@ import Services from "@/components/Home/Services/Services";
 import Gallery from "@/components/Home/Gallery/Gallery";
 import Partners from "@/components/Home/Partners";
 import News from "@/components/Home/News/News";
+import Footer from "@/components/Shared/Navigation/Footer";
 
 const noto = Noto_Sans_KR({
   subsets: ["latin"],
@@ -23,6 +24,7 @@ export default function Home() {
       <Gallery />
       <Partners />
       <News />
+      <Footer />
     </main>
   );
 }

@@ -3,6 +3,7 @@ import ComponentWrapper from "@/components/Shared/Wrappers/ComponentWrapper";
 import NextImage from "@/components/Shared/Image/NextImage";
 import ConsultationHistory from "./ConsultationHistory";
 import AppointmentForm from "./AppointmentForm";
+import Services from "./Services";
 
 const Consultation = () => {
   return (
@@ -35,6 +36,24 @@ const Consultation = () => {
             <ConsultationHistory />
           </div>
         </div>
+        <Services />
+      </div>
+      <div className="flex flex-col items-center justify-start gap-3 absolute right-5 top-[20%]">
+        <NextImage
+          imageSrc="/Assets/Consultation/Play.png"
+          containerStyle="h-[50px] w-[50px]"
+          imageStyle="object-contain"
+        />
+        <NextImage
+          imageSrc="/Assets/Consultation/Messege.png"
+          containerStyle="h-[50px] w-[50px]"
+          imageStyle="object-contain"
+        />
+        <NextImage
+          imageSrc="/Assets/Consultation/Modoo.png"
+          containerStyle="h-[50px] w-[50px]"
+          imageStyle="object-contain"
+        />
       </div>
     </ComponentWrapper>
   );

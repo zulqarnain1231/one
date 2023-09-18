@@ -22,7 +22,7 @@ const AppointmentForm = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="w-full flex flex-col items-start justify-start gap-6 bg-brand-main rounded-[10px] px-6 pt-16 pb-28 lg:-mt-40 shadow-xl"
+      className="w-full flex flex-col items-start justify-start gap-6 bg-brand-main rounded-[10px] px-6 sm:pt-16 sm:pb-28 py-8 lg:-mt-40 shadow-xl"
     >
       <div className="w-full flex items-center justify-start gap-3">
         <HiOutlineMail className="text-white-main text-[28px]" />
